@@ -16,15 +16,17 @@ def _(mo):
     mo.md(r"""
     ---
 
-    **Universidade da Costa Rica** | Escola de Engenharia Elétrica
+    **UNIVERSIDADE FEDERAL DA PARAÍBA** | CENTRO DE INFORMÁTICA
 
     ### `PyX` - Série de tutoriais de Python para análise de dados
 
     # `Py0` - *Introdução ao Python*
 
-    > Python é uma linguagem de programação de uso geral, atualmente a mais popular para análise de dados. Sua sintaxe foi pensada desde o início para ser mais legível.
+    *MATERIAL CRIADO E CEDIDO POR: Prof. Fabián Abarca - da Universidad de Costa Rica.*
 
-    *Fabián Abarca e Elizabet Medeiros*
+    Profa Elizabet Medeiros
+
+    > Python é uma linguagem de programação de uso geral, atualmente a mais popular para análise de dados. Sua sintaxe foi pensada desde o início para ser mais legível.
 
     ---
     """)
@@ -38,17 +40,12 @@ def _(mo):
 
     Existem várias formas de execução de Python. Pode ser executado no próprio computador ou em alguma das várias plataformas online que existem, como [Google Colab](https://colab.research.google.com/) ou [molab](https://molab.marimo.io/notebooks). Na máquina local é necessário instalar Python e um gerenciador de pacotes em qualquer plataforma (Linux, Windows, macOS).
 
-    - A instalação recomendada de Python e seus pacotes é com [uv](https://docs.astral.sh/uv/).
-    - Também é possível a instalação do [Anaconda](https://www.anaconda.com/).
-
-    Uma vez instalada alguma dessas ferramentas, é possível "rodar" *scripts* com a extensão `.py` pelo terminal (também chamado de linha de comandos, console ou CLI, de *Command Line Interface*).
-
-    * Executando o código-fonte com Python:
-
+    - A instalação recomendada de Python e seus pacotes é com [uv]
+    - Para instalar o Python, pode seguir primeiro as [instruções de instalação de **uv**](https://docs.astral.sh/uv/getting-started/installation/) para seu sistema operacional.
+    - Depois da instalação do **uv**, basta rodar o comando abaixo para instalar o Python:
     ```bash
-    $ python script.py
+    uv python install
     ```
-
     * Ou usá-lo em modo interativo na CLI:
 
     ```bash
@@ -59,7 +56,7 @@ def _(mo):
 
     ou a partir de qualquer um dos muitos **IDE** (ambientes de desenvolvimento integrado, *Integrated Development Environments*) disponíveis, como:
 
-    * [Visual Studio Code](https://code.visualstudio.com/)
+    * [Visual Studio Code](https://code.visualstudio.com/) (recomendado)
     * [Cursor](https://cursor.com/)
     * [Antigravity](https://antigravity.google/)
     * [Eclipse](https://www.eclipse.org/ide/)
