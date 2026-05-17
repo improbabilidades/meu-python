@@ -107,7 +107,7 @@ def _(mo):
 @app.cell
 def _():
     number = 15
-    string = 'olá!'
+    string = "olá!"
     n1, n2, n3 = (1, 2, 3)
     print(number, string, n1 + n2 + n3)
     return
@@ -188,11 +188,11 @@ def _(mo):
 def _():
     # Definição
     n_int = 2
-    print(n_int, 'é', type(n_int))
+    print(n_int, "é", type(n_int))
     n_float = 3.0
-    print(n_float, 'é', type(n_float))
+    print(n_float, "é", type(n_float))
     n_complex = 5 + 8j
-    print(n_complex, 'é', type(n_complex))
+    print(n_complex, "é", type(n_complex))
 
     # Conversão de tipo de dado
     new_int = int(n_float)
@@ -329,12 +329,12 @@ def _(mo):
 
 @app.cell
 def _():
-    L1 = ['ha']
+    L1 = ["ha"]
     L2 = L1 * 3
-    L3 = ['alpha', 'beta', 'gamma']
+    L3 = ["alpha", "beta", "gamma"]
     L4 = [x for x in range(6)]
     L5 = [x for x in range(6) if x % 3 != 0]
-    L6 = [[1,2,3],[4,5,6],[7,8,9]]
+    L6 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
     print(L1, L2, L3)
     print(L4)
@@ -360,7 +360,7 @@ def _(mo):
 def _():
     T1 = (1,)
     T2 = 1, 2, 3
-    T3 = ('In', 'a', 'galaxy', 'far', 'far', 'away')
+    T3 = ("In", "a", "galaxy", "far", "far", "away")
     T4 = tuple([x for x in range(3)])
 
     print(type(T1))
@@ -450,10 +450,10 @@ def _(mo):
 
 @app.cell
 def _():
-    phrase = ['all', 'you', 'need', 'is', 'love']
+    phrase = ["all", "you", "need", "is", "love"]
     print(phrase)
 
-    need = 'food'
+    need = "food"
     phrase[-1] = need
     print(phrase)
     return
@@ -481,7 +481,7 @@ def _(mo):
 
 @app.cell
 def _():
-    print('Hello "world"' + ", " + '''greetings.''')
+    print('Hello "world"' + ", " + """greetings.""")
     return
 
 
@@ -501,11 +501,11 @@ def _(mo):
 
 @app.cell
 def _():
-    text = 'hElLo, gOoD mOrnInG'
+    text = "hElLo, gOoD mOrnInG"
 
     print(text)
     print(text.capitalize())
-    print(text.lower().endswith('ing'))
+    print(text.lower().endswith("ing"))
     print(text.upper())
     return
 
@@ -547,13 +547,13 @@ def _(mo):
 
 @app.cell
 def _():
-    word = 'world'
+    word = "world"
     x, y = (5, 3)
     z = x / y
     w = 1600
-    print('Hello {}!'.format(word))
-    print('{} entre {} é cerca de {:0.2f}'.format(x, y, z))
-    print(f'Nos anos {w}...')
+    print("Hello {}!".format(word))
+    print("{} entre {} é cerca de {:0.2f}".format(x, y, z))
+    print(f"Nos anos {w}...")
     return (x,)
 
 
@@ -578,15 +578,15 @@ def _(mo):
 @app.cell
 def _():
     # Com as chaves
-    a = {'um': 1, 'dois': 2, 'tres': 3}
+    a = {"um": 1, "dois": 2, "tres": 3}
     b = dict(um=1, dois=2, tres=3)
 
     # Com a função dict()
-    c = dict(zip(['um', 'dois', 'tres'], [1, 2, 3]))
-    d = dict([('dois', 2), ('um', 1), ('tres', 3)])
+    c = dict(zip(["um", "dois", "tres"], [1, 2, 3]))
+    d = dict([("dois", 2), ("um", 1), ("tres", 3)])
 
     # Com a função zip() que "emparelha" duas listas
-    e = dict({'tres': 3, 'um': 1, 'dois': 2})
+    e = dict({"tres": 3, "um": 1, "dois": 2})
     print(a == b == c == d == e)
 
     # Com uma lista de tuplas (ordem diferente)
@@ -613,11 +613,15 @@ def _(mo):
 
 @app.cell
 def _():
-    d = {'IE0247': 'Sinais e Sistemas I', 'IE0347': 'Sinais e Sistemas II', 'IE0405': 'Modelos Probabilísticos de Sinais e Sistemas'}
+    d = {
+        "IE0247": "Sinais e Sistemas I",
+        "IE0347": "Sinais e Sistemas II",
+        "IE0405": "Modelos Probabilísticos de Sinais e Sistemas",
+    }
     print(list(d))
     print(len(d))
-    print(d['IE0405'])
-    print('MA1001' in d)
+    print(d["IE0405"])
+    print("MA1001" in d)
     return
 
 
@@ -681,11 +685,11 @@ def _():
 
     # Saudação conforme a hora do dia
     if H < 12:
-        print('Bom dia')
+        print("Bom dia")
     elif H < 18:
-        print('Boa tarde')
+        print("Boa tarde")
     else:
-        print('Boa noite')
+        print("Boa noite")
     return
 
 
@@ -711,9 +715,9 @@ def _(x):
 
     # Se a definição de x está "comentada"
     try:
-        print(f'A variável existe e é {x}.')
+        print(f"A variável existe e é {x}.")
     except:
-        print('Opa! A variável não existe')
+        print("Opa! A variável não existe")
 
     # Agora pode-se testar "descomentando" x
     return
@@ -792,17 +796,17 @@ def _(mo):
 
 @app.cell
 def _():
-    print('Primeiro:')
+    print("Primeiro:")
     i = 1
     while i % 5 != 0:
         print(i)
         i += 1
 
-    print('Segundo:')
+    print("Segundo:")
     for j in (8, 13, 21, 34):
         print(j)
 
-    print('Terceiro:')
+    print("Terceiro:")
     for k in range(5):
         print(k)
     return
@@ -843,9 +847,9 @@ def _(mo):
 
 @app.cell
 def _():
-    name = input('Digite seu nome: ')
+    name = input("Digite seu nome: ")
 
-    print('Hi {}.'.format(name))
+    print("Hi {}.".format(name))
     print('This is the help for function "abs":\n')
     help(abs)
     return
