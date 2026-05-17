@@ -114,10 +114,10 @@ def _():
     from random import randint
     from scipy.constants import c
 
-    print('4! =', math.factorial(4))
-    print('C/D =', np.pi)
-    print('Un número aleatorio =', randint(50, 60))
-    print('Velocidad de la luz =', c)
+    print("4! =", math.factorial(4))
+    print("C/D =", np.pi)
+    print("Un número aleatorio =", randint(50, 60))
+    print("Velocidad de la luz =", c)
     return (math,)
 
 
@@ -180,9 +180,10 @@ def _(mo):
 @app.cell
 def _():
     import random as rd
-    print(rd.gauss(1,3))
-    print(rd.randint(0,100))
-    print(rd.uniform(0,100))
+
+    print(rd.gauss(1, 3))
+    print(rd.randint(0, 100))
+    print(rd.uniform(0, 100))
     return
 
 
@@ -260,7 +261,7 @@ def _(mo):
 
 @app.cell
 def _():
-    d = {(i,j) : i+j for i in range(1, 7) for j in range (1, 7)}
+    d = {(i, j): i + j for i in range(1, 7) for j in range(1, 7)}
     print(d)
     return (d,)
 
@@ -290,13 +291,13 @@ def _(mo):
 
 @app.cell
 def _(d, dinv):
-    print('Antes...\n')
+    print("Antes...\n")
     print(d.items())
 
-    for i,j in d.items(): 
-            dinv[j].append(i)
+    for i, j in d.items():
+        dinv[j].append(i)
 
-    print('\nDespués...')        
+    print("\nDespués...")
     dinv
     return
 
@@ -313,8 +314,8 @@ def _(mo):
 
 @app.cell
 def _(dinv):
-    print('Combinaciones que suman 7:', dinv[7])
-    print('Elementos:', len(dinv[7]))
+    print("Combinaciones que suman 7:", dinv[7])
+    print("Elementos:", len(dinv[7]))
     return
 
 
@@ -328,9 +329,9 @@ def _(mo):
 
 @app.cell
 def _(dinv):
-    probabilidades = {i : len(j)/36 for i,j in dinv.items()}
-    print('El vector de probabilidades de suma es =', probabilidades)
-    print('La probabilidad de que la suma sea 7 es =', probabilidades[7])
+    probabilidades = {i: len(j) / 36 for i, j in dinv.items()}
+    print("El vector de probabilidades de suma es =", probabilidades)
+    print("La probabilidad de que la suma sea 7 es =", probabilidades[7])
     return
 
 
@@ -355,9 +356,9 @@ def _(mo):
 def _():
     import csv
 
-    unos = [1]*10
+    unos = [1] * 10
 
-    with open('unos.csv', 'w', newline='') as archivo:
+    with open("unos.csv", "w", newline="") as archivo:
         escribir = csv.writer(archivo)
         escribir.writerow(unos)
     return
@@ -400,6 +401,7 @@ def _(mo):
 @app.cell
 def _():
     import datetime
+
     _ahora = datetime.datetime.now()
     print(_ahora)
     print(_ahora.month)
@@ -419,10 +421,11 @@ def _(mo):
 @app.cell
 def _(bisiesto, datetime):
     import calendar
+
     _ahora = datetime.datetime.now()
     es_bisiesto = calendar.isleap(_ahora.year)
     calendario = calendar.month(_ahora.year, _ahora.month)
-    print('Año bisiesto:', bisiesto)
+    print("Año bisiesto:", bisiesto)
     print(calendario)
     return
 
