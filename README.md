@@ -82,3 +82,22 @@ marimo edit Py0.py
 - `rm nome_do_arquivo`: remove o arquivo especificado.
 - `rm -r nome_da_pasta`: remove a pasta e todo o seu conteúdo (cuidado com esse comando!).
 - `clear`: limpa a tela do terminal.
+
+## Comandos básicos de Git
+
+### Fazer commit
+
+```bash
+git add .
+git commit -m "Mensagem do commit"
+```
+
+E finalmente, para enviar as mudanças para o repositório remoto:
+
+```bash
+git push
+```
+
+Caso entrar na tela de terror com editor de Vim, basta digitar ESC (a tecla) + `:wq` para salvar e sair do editor.
+
+![meme](https://cdn.thenewstack.io/media/2022/08/0ae25624-exit-vim-the-arrival-way-6n632sipjag61-e1660327822326.jpg)
