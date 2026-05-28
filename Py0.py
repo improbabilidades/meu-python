@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.23.6"
+__generated_with = "0.23.8"
 app = marimo.App()
 
 
@@ -36,6 +36,32 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
+    ##Introdução
+
+    Alguns dos principais pontos que trazem **destaque para o Python** são:
+    - **É uma linguagem interpretada** --> isso acelera bastante a velocidade de desenvolvimento
+    - **É linguagem de alto nível** --> sua sintaxe é simples, fácil de aprender e muito próxima da linguagem falada por nós
+    - **Possui uma semântica dinâmica** --> o próprio programa “reconhece” qual tipo de dado está sendo utilizado, fazendo com que ele não precise ser previamente declarado
+    - É utilizado para desenvolvimento de **software, análise de dados, inteligência artificial, automação de tarefas, criação de aplicativos web, programação orientada a objetos, mineração de dados** e muito mais
+
+    ##Motivos para aprender a programar em Python##
+
+    - Tem sintaxe simples;
+    - É multiplataforma e de código aberto;
+    - É versátil;
+    - Tem uma comunidade fiel e ativa;
+    - É utilizado por grandes empresas;
+    - É a linguagem mais popular em ciência de dados;
+    - Está em alta no mercado de trabalho.
+    - Python é constantemente indicado como primeira linguagem de programação para iniciantes.
+    - Permite aplicar orientação a objetos Python e conceitos modernos de programação.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
     ## Instalação
 
     Existem várias formas de execução de Python. Pode ser executado no próprio computador ou em alguma das várias plataformas online que existem, como [Google Colab](https://colab.research.google.com/) ou [molab](https://molab.marimo.io/notebooks). Na máquina local é necessário instalar Python e um gerenciador de pacotes em qualquer plataforma (Linux, Windows, macOS).
@@ -57,6 +83,7 @@ def _(mo):
     ou a partir de qualquer um dos muitos **IDE** (ambientes de desenvolvimento integrado, *Integrated Development Environments*) disponíveis, como:
 
     * [Visual Studio Code](https://code.visualstudio.com/) (recomendado)
+    * [Spyder](https://docs.spyder-ide.org/current/installation.html)
     * [Cursor](https://cursor.com/)
     * [Antigravity](https://antigravity.google/)
     * [Eclipse](https://www.eclipse.org/ide/)
@@ -478,7 +505,7 @@ def _(mo):
 
 @app.cell
 def _():
-    print('Hello "world"' + ", " + """greetings.""")
+    print('Olá "pessoal"' + ", " + """tudo bem?""")
     return
 
 
@@ -930,6 +957,8 @@ def _(mo):
 def _(mo):
     mo.md(r"""
     ---
+    **Universidade Federal da Paraíba** | Centro de Informática | Departamento de Computação Científica
+
     **Universidade da Costa Rica** | Faculdade de Engenharia | Escola de Engenharia Elétrica
 
     &copy; 2020 - 2026
