@@ -16,15 +16,15 @@ def _(mo):
     mo.md(r"""
     ---
 
-    **Universidad de Costa Rica** | Escuela de Ingeniería Eléctrica
+    **Universidade da Costa Rica** | Escola de Engenharia Elétrica
 
-    *IE0405 - Modelos Probabilísticos de Señales y Sistemas*
+    *IE0405 - Modelos Probabilísticos de Sinais e Sistemas*
 
-    ### `PyX` - Serie de tutoriales de Python para el análisis de datos
+    ### `PyX` - Série de tutoriais em Python para análise de dados
 
-    # `Py1` - *Funciones y librerías estándar*
+    # `Py1` - *Funções e bibliotecas padrão*
 
-    > Dentro de las librerías estándar de Python hay herramientas útiles para operaciones numéricas básicas, para el manejo de archivos como los que se van a aplicar en el curso y otras funciones útiles para programación en general.
+    > Dentro das bibliotecas padrão do Python há ferramentas úteis para operações numéricas básicas, para o manuseio de arquivos como os que serão aplicados no curso e outras funções úteis para programação em geral.
 
     *Fabián Abarca Calderón*
 
@@ -36,16 +36,16 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ## Funciones, librerías y métodos
+    ## Funções, bibliotecas e métodos
 
-    En programación generalmente se acepta que "no hay que reinventar la rueda" y también que "no hay que repetirse", y además que "hay que mantenerlo sencillo". Para no olvidarlo, existen estos acrónimos:
+    Em programação, geralmente se aceita que "não há que reinventar a roda" e também que "não há que se repetir", e além disso que "é preciso mantê-lo simples". Para não esquecer isso, existem estes acrônimos:
 
     * **DRY**, *don't repeat yourself*
-    * **KISS**, *keep it simple, st#pid*
+    * **KISS**, *keep it simple, stupid*
 
-    Una forma de seguir estos buenos consejos es creando funciones que se invocan cuando hay que hacer tareas repetitivas, y también utilizando piezas de código ("librerías") que ya han sido desarrolladas para resolver aplicaciones específicas.
+    Uma forma de seguir estes bons conselhos é criando funções que são invocadas quando há tarefas repetitivas, e também utilizando peças de código ("bibliotecas") que já foram desenvolvidas para resolver aplicações específicas.
 
-    La existencia de funciones y librerías (con sus módulos y métodos asociados), desarrollados por una inmensa comunidad global, agregan muchas funcionalidades poderosas a Python.
+    A existência de funções e bibliotecas (com seus módulos e métodos associados), desenvolvidas por uma imensa comunidade global, agrega muitas funcionalidades poderosas ao Python.
     """)
     return
 
@@ -54,13 +54,13 @@ def _(mo):
 def _(mo):
     mo.md(r"""
     ---
-    ## 1.1 - Funciones
+    ## 1.1 - Funções
 
-    En Python, la sintaxis para la creación de una función es:
+    Em Python, a sintaxe para a criação de uma função é:
 
     ```python
     def nombre():
-        <acción de la función>
+        <ação da função>
     ```
     """)
     return
@@ -79,30 +79,29 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ---
-    ## 1.2 - Librerías, módulos, métodos y atributos
+    ## 1.2 - Bibliotecas, módulos, métodos e atributos
 
-    Las librerías son grupos de funciones predefinidas, que se pueden importar al código en conjunto y utilizarlas para realizar tareas de foma más sencilla, reduciendo así el tamaño del código propio y simplificándolo.
+    As bibliotecas são grupos de funções predefinidas, que podem ser importadas para o código em conjunto e utilizadas para realizar tarefas de forma mais simples, reduzindo assim o tamanho do código próprio e simplificando-o.
 
-    Para llamarlas se utiliza
+    Para importá-las, utiliza-se
 
     ```python
     import <libreria>
     ```
 
-    donde también se utiliza un "alias": un nombre corto (muy corto, como `np` para `numpy`) para referirse a este por el resto del programa.
+    onde também se utiliza um "alias": um nome curto (bem curto, como `np` para `numpy`) para se referir a ele pelo resto do programa.
 
     ```python
     import <libreria> as <alias>
     ```
 
-    Sin embargo en ocasiones no se desea importar toda la librería sino solo algunos componentes o "módulos":
+    Entretanto, em algumas ocasiões, não se deseja importar toda a biblioteca, mas apenas alguns componentes ou "módulos":
 
     ```python
     from <libreria> import <modulo o metodo>
     ```
 
-    Luego de importarlas, se invocan sus atributos y métodos con la notación del punto. Por ejemplo, la función coseno de la librería NumPy es `np.cos()` (un método) y el número $\pi$ es `np.pi` (un atributo). Si se importa un método directamente, no es necesaria la notación del punto, por ejemplo: `randint()` (una función de `random`).
+    Depois de importá-las, seus atributos e métodos são chamados com a notação de ponto. Por exemplo, a função cosseno da biblioteca NumPy é `np.cos()` (um método) e o número $\pi$ é `np.pi` (um atributo). Se um método for importado diretamente, a notação de ponto não é necessária, por exemplo: `randint()` (uma função de `random`).
     """)
     return
 
@@ -116,39 +115,39 @@ def _():
 
     print("4! =", math.factorial(4))
     print("C/D =", np.pi)
-    print("Un número aleatorio =", randint(50, 60))
-    print("Velocidad de la luz =", c)
+    print("Um número aleatório =", randint(50, 60))
+    print("Velocidade da luz =", c)
     return (math,)
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ### 1.2.1 - Librería `math`
+    ### 1.2.1 - Biblioteca `math`
 
-    Estas son funciones matemáticas comunes. Hay una gran [variedad](https://docs.python.org/3/library/math.html), entre las que se incluyen:
+    Estas são funções matemáticas comuns. Há uma grande [variedade](https://docs.python.org/3/library/math.html), entre as quais se incluem:
 
     ##### Redondeo
 
-    * `math.ceil(x)`: retorna el "techo" de `x`, el entero más pequeño mayor o igual que `x`.
-    * `math.floor(x)`: retorna el "piso" de `x`, el entero más grande menor o igual que `x`.
+    * `math.ceil(x)`: retorna o "teto" de `x`, o menor inteiro maior ou igual a `x`.
+    * `math.floor(x)`: retorna o "piso" de `x`, o maior inteiro menor ou igual a `x`.
 
     ##### Análisis combinatorio
 
-    * `math.comb(n, k)`: retorna el coeficiente binomial $C(n,k)$, correspondiente al número de combinaciones de `k` elementos que se pueden obtener de un grupo de `n` elementos, donde el **orden no importa**.
+    * `math.comb(n, k)`: retorna o coeficiente binomial $C(n,k)$, correspondente ao número de combinações de `k` elementos que podem ser obtidas de um grupo de `n` elementos, onde a **ordem não importa**.
 
     $$
     n \choose k
     $$
 
-    * `math.perm(n, k)`: retorna el número de formas de elegir `k` elementos de `n` elementos sin repetición, donde el **orden sí importa**.
+    * `math.perm(n, k)`: retorna o número de formas de escolher `k` elementos de `n` elementos sem repetição, onde a **ordem importa**.
 
-    ##### Otras funciones útiles
+    ##### Outras funções úteis
 
-    * `math.factorial(x)`: retorna el factorial de `x`: $x!$.
-    * `math.pow(x, y)`: retorna el valor de $x^y$.
-    * `math.sqrt(x)`: retorna la raíz cuadrada de `x`: $\sqrt{x}$.
-    * `math.erf(x)`: retorna el valor de la función de error (la función de distribución normal estándar) evaluada en `x`. Esta función será de gran utilidad en este curso.
+    * `math.factorial(x)`: retorna o fatorial de `x`: $x!$.
+    * `math.pow(x, y)`: retorna o valor de $x^y$.
+    * `math.sqrt(x)`: retorna a raiz quadrada de `x`: $\sqrt{x}$.
+    * `math.erf(x)`: retorna o valor da função erro (a função de distribuição normal padrão) avaliada em `x`. Esta função será de grande utilidade neste curso.
     """)
     return
 
@@ -164,15 +163,15 @@ def _(math):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ### 1.2.2 - Librería `random`
+    ### 1.2.2 - Biblioteca `random`
 
-    Generación de números pseudo-aleatorios, con distintas distribuciones. Hay una gran [variedad](https://docs.python.org/3/library/random.html), entre las que se incluyen:
+    Geração de números pseudoaleatórios, com diferentes distribuições. Há uma grande [variedade](https://docs.python.org/3/library/random.html), entre as quais se incluem:
 
-    * `random.randint(a, b)`: retorna un número aleatorio entero entre `a` y `b` (intervalo cerrado).
-    * `random.uniform(a, b)`: retorna un número aleatorio flotante para una distribución uniforme entre `a` y `b`.
-    * `random.sample(population, k)`: retorna una lista con `k` muestras aleatorias tomadas de la lista `population`.
-    * `random.expovariate(lambd)`: retorna un número aleatorio flotante para una distribución exponencial con parámetro `lambd`.
-    * `random.gauss(mu, sigma)`: retorna un número aleatorio (flotante) para una distribución normal con media `mu` y desviación estándar `sigma`.
+    * `random.randint(a, b)`: retorna um número aleatório inteiro entre `a` e `b` (intervalo fechado).
+    * `random.uniform(a, b)`: retorna um número aleatório em ponto flutuante para uma distribuição uniforme entre `a` e `b`.
+    * `random.sample(population, k)`: retorna uma lista com `k` amostras aleatórias retiradas da lista `population`.
+    * `random.expovariate(lambd)`: retorna um número aleatório em ponto flutuante para uma distribuição exponencial com parâmetro `lambd`.
+    * `random.gauss(mu, sigma)`: retorna um número aleatório (em ponto flutuante) para uma distribuição normal com média `mu` e desvio padrão `sigma`.
     """)
     return
 
@@ -190,17 +189,17 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ### 1.2.3 - Librería `statistics`
+    ### 1.2.3 - Biblioteca `statistics`
 
-    Herramientas estadísticas para aplicar a un conjunto de datos. Hay una gran [variedad](https://docs.python.org/3/library/statistics.html), entre las que se incluyen:
+    Ferramentas estatísticas para aplicar a um conjunto de dados. Há uma grande [variedade](https://docs.python.org/3/library/statistics.html), entre as quais se incluem:
 
-    * `statistics.mean(data)`: retorna el valor esperado de un conjunto de datos `data`.
-    * `statistics.pstdev(data)`: retorna la desviación estándar de la población para el conjunto de datos `data`.
-    * `statistics.stdev(data)`: retorna la desviación estándar de una muestra para el conjunto de datos `data`.
-    * `statistics.pvariance(data)`: retorna la varianza de la población para el conjunto de datos `data`.
-    * `statistics.variance(data)`: retorna la varianza de una muestra para el conjunto de datos `data`.
+    * `statistics.mean(data)`: retorna o valor esperado de um conjunto de dados `data`.
+    * `statistics.pstdev(data)`: retorna o desvio padrão populacional do conjunto de dados `data`.
+    * `statistics.stdev(data)`: retorna o desvio padrão amostral do conjunto de dados `data`.
+    * `statistics.pvariance(data)`: retorna a variância populacional do conjunto de dados `data`.
+    * `statistics.variance(data)`: retorna a variância amostral do conjunto de dados `data`.
 
-    Entre otros. Consultar la documentación adjunta.
+    Entre outras. Consulte a documentação anexa.
     """)
     return
 
@@ -219,13 +218,13 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ### 1.2.4 - Librería `collections`
+    ### 1.2.4 - Biblioteca `collections`
 
-    Presenta alternativas a las listas, sets, tuplas y diccionarios que incluye Python por defecto. Incluye diferentes estructuras para almacenar y manejar datos, definidas por clases, cada una con sus métodos específicos Hay una gran [variedad](https://docs.python.org/3/library/collections.html), entre las que se incluyen:
+    Apresenta alternativas às listas, sets, tuplas e dicionários incluídos no Python por padrão. Inclui diferentes estruturas para armazenar e manipular dados, definidas por classes, cada uma com seus métodos específicos. Há uma grande [variedade](https://docs.python.org/3/library/collections.html), entre as quais se incluem:
 
-    * `collections.deque`: Agrega funcionalidades a una lista convencional, como pops y appends.
-    * `collections.OrderedDict`: Diccionario que registra el orden en que fueron agregados los objetos.
-    * `collections.UserString`: Agrega funcionalidades para manejo de objetos tipo `String`.
+    * `collections.deque`: adiciona funcionalidades a uma lista convencional, como `pop` e `append`.
+    * `collections.OrderedDict`: dicionário que registra a ordem em que os objetos foram adicionados.
+    * `collections.UserString`: adiciona funcionalidades para o manejo de objetos do tipo `String`.
     """)
     return
 
@@ -233,13 +232,13 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    El siguiente es un ejemplo para la solución "elegante" de un problema común.
+    A seguir, há um exemplo para a solução "elegante" de um problema comum.
 
-    > ¿Cuál es la probabilidad de que, al lanzar dos dados, la suma de los dados sea 7? [2]
+    > Qual é a probabilidade de que, ao lançar dois dados, a soma dos dados seja 7? [2]
 
-    (El resultado es fácil de deducir: de 36 combinaciones posibles, seis suman siete (1 + 6, 2 + 5, 3 + 4, 4 + 3, 5 + 2, 6 + 1), entonces 6/36 = 1/6 $\approx$ 0.16667).
+    (O resultado é fácil de deduzir: de 36 combinações possíveis, seis somam sete (1 + 6, 2 + 5, 3 + 4, 4 + 3, 5 + 2, 6 + 1), então 6/36 = 1/6 $\approx$ 0.16667).
 
-    Primero, el objeto `defaultdict` del [módulo](https://docs.python.org/2/library/collections.html) `collections` crea diccionarios con valores predeterminados cuando encuentra una nueva clave. Su uso práctico es el de **"diccionario rellenable"**.
+    Primeiro, o objeto `defaultdict` do [módulo](https://docs.python.org/2/library/collections.html) `collections` cria dicionários com valores padrão quando encontra uma nova chave. Seu uso prático é o de **"dicionário preenchível"**.
     """)
     return
 
@@ -254,7 +253,7 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Ahora, es posible crear un diccionario con todas las combinaciones posibles y la suma de cada una, con un doble bucle `for`:
+    Agora, é possível criar um dicionário com todas as combinações possíveis e a soma de cada uma, com um duplo laço `for`:
     """)
     return
 
@@ -269,7 +268,7 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Seguidamente se crea un `defaultdict` vacío. Este implica que, más adelante, si una clave no es encontrada en el diccionario, en lugar de un `KeyError` se crea una nueva entrada (un nuevo `key:value`).
+    Em seguida, cria-se um `defaultdict` vazio. Isso implica que, mais adiante, se uma chave não for encontrada no dicionário, em vez de um `KeyError` será criada uma nova entrada (um novo `key:value`).
     """)
     return
 
@@ -284,7 +283,7 @@ def _(defaultdict):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Es posible extraer del diccionario las combinaciones que suman 7. El método `.items()` genera una lista de pares de "tuplas" (una tupla es un conjunto ordenado e inmutable de elementos) a partir del diccionario de combinaciones creado en `d`. "Rellenamos" el `defaultdict` con los elementos en el diccionario creado anteriormente y el método `.append()`, esto con un bucle `for` en donde los índices `i,j` representan los pares de combinaciones y su suma. La ventaja es que ahora están todos agrupados.
+    É possível extrair do dicionário as combinações que somam 7. O método `.items()` gera uma lista de pares de "tuplas" (uma tupla é um conjunto ordenado e imutável de elementos) a partir do dicionário de combinações criado em `d`. "Preenchemos" o `defaultdict` com os elementos do dicionário criado anteriormente e o método `.append()`, isso com um laço `for` em que os índices `i,j` representam os pares de combinações e sua soma. A vantagem é que agora estão todos agrupados.
     """)
     return
 
@@ -305,9 +304,9 @@ def _(d, dinv):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    El `for` anterior puede leerse como: "para cada par en la lista de ítemes, en la posición `j` (la suma de las combinaciones) añada la combinación correspondiente (en `i`)".
+    O `for` anterior pode ser lido como: "para cada par na lista de itens, na posição `j` (a soma das combinações) adicione a combinação correspondente (em `i`)".
 
-    Extraemos los pares que suman siete y obtenemos la cantidad de estos.
+    Extraímos os pares que somam sete e obtemos a quantidade deles.
     """)
     return
 
@@ -322,7 +321,7 @@ def _(dinv):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Finalmente, y más en general, se obtiene la probabilidad para todas las sumas en forma de un solo diccionario:
+    Por fim, e de forma mais geral, obtém-se a probabilidade para todas as somas na forma de um único dicionário:
     """)
     return
 
@@ -330,24 +329,24 @@ def _(mo):
 @app.cell
 def _(dinv):
     probabilidades = {i: len(j) / 36 for i, j in dinv.items()}
-    print("El vector de probabilidades de suma es =", probabilidades)
-    print("La probabilidad de que la suma sea 7 es =", probabilidades[7])
+    print("O vetor de probabilidades das somas é =", probabilidades)
+    print("A probabilidade de a soma ser 7 é =", probabilidades[7])
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ### 1.2.5 - Librería `csv`
+    ### 1.2.5 - Biblioteca `csv`
 
-    Esta librería implementa clases para el manejo de archivos tipo CSV (*Comma Separated Values*), con actividades típicas como *leer* datos desde y *escribir* datos en un archivo CSV u otros similares.
+    Esta biblioteca implementa classes para o manejo de arquivos do tipo CSV (*Comma Separated Values*), com atividades típicas como *ler* dados de e *escrever* dados em um arquivo CSV ou outros similares.
 
-    Entre sus funciones se encuentran:
+    Entre suas funções estão:
 
-    * `csv.reader(csvfile, dialect='excel', **fmtparams)`: crea un objeto tipo `reader` con los datos del archivo `csvfile` para el "dialecto" (formato) especificado. `fmtparams` son "parámetros de formato" adicionales para modificar la configuración del formato.
-    * `csv.writer(csvfile, dialect='excel', **fmtparams)`: crea un objeto tipo `writer` para escribir datos al archivo `csvfile` con el "dialecto" (formato) especificado. `fmtparams` son "parámetros de formato" adicionales para modificar la configuración del formato.
+    * `csv.reader(csvfile, dialect='excel', **fmtparams)`: cria um objeto do tipo `reader` com os dados do arquivo `csvfile` para o "dialeto" (formato) especificado. `fmtparams` são "parâmetros de formato" adicionais para modificar a configuração do formato.
+    * `csv.writer(csvfile, dialect='excel', **fmtparams)`: cria um objeto do tipo `writer` para escrever dados no arquivo `csvfile` com o "dialeto" (formato) especificado. `fmtparams` são "parâmetros de formato" adicionais para modificar a configuração do formato.
 
-    La [documentación](https://docs.python.org/3/library/csv.html) completa tiene todos los detalles.
+    A [documentação](https://docs.python.org/3/library/csv.html) completa tem todos os detalhes.
     """)
     return
 
@@ -367,13 +366,13 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ### 1.2.6 - Librería `os`
+    ### 1.2.6 - Biblioteca `os`
 
-    Permite manejar archivos y rutas del sistema operativo como si fueran comandos en terminal. La lista completa de funciones se presenta en la [documentación](https://docs.python.org/3/library/os.html). Los métodos más importantes son:
+    Permite manipular arquivos e caminhos do sistema operacional como se fossem comandos no terminal. A lista completa de funções é apresentada na [documentação](https://docs.python.org/3/library/os.html). Os métodos mais importantes são:
 
-    * `os.getcwd()`: retorna el directorio de trabajo actual.
-    * `os.chdir(path)`: Cambia el directorio de trabajo al especificado por `path`.
-    * `os.path` es un módulo para manipulación de direcciones (rutas) del sistema.
+    * `os.getcwd()`: retorna o diretório de trabalho atual.
+    * `os.chdir(path)`: altera o diretório de trabalho para o especificado por `path`.
+    * `os.path` é um módulo para manipulação de endereços (caminhos) do sistema.
     """)
     return
 
@@ -389,11 +388,11 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    ### 1.2.7 - Otras librerías
+    ### 1.2.7 - Outras bibliotecas
 
-    #### 1.2.7.1 - Librería `datetime`
+    #### 1.2.7.1 - Biblioteca `datetime`
 
-    Presenta clases para manipulación de fechas y tiempo. Tiene dos módulos: `calendar` y `time`, cada uno con sus funciones, y permiten generar información como la fecha y hora actuales, la zona horaria, entre otros. La documentación completa se encuentra [aquí](https://docs.python.org/3/library/datetime.html) y excelentes ejemplos en [Programiz](https://www.programiz.com/python-programming/datetime).
+    Apresenta classes para manipulação de datas e tempo. Tem dois módulos: `calendar` e `time`, cada um com suas funções, e permitem gerar informações como a data e hora atuais, o fuso horário, entre outras. A documentação completa está [aqui](https://docs.python.org/3/library/datetime.html) e há excelentes exemplos no [Programiz](https://www.programiz.com/python-programming/datetime).
     """)
     return
 
@@ -413,7 +412,7 @@ def _(mo):
     mo.md(r"""
     #### 1.2.7.2 - Módulo `calendar`
 
-    Presenta una clase `Calendar` que permite crear objetos que representen calendarios, e incluye métodos para manipularlos. La documentación completa se encuentra [aquí](https://docs.python.org/3/library/calendar.html).
+    Apresenta uma classe `Calendar` que permite criar objetos que representem calendários e inclui métodos para manipulá-los. A documentação completa está [aqui](https://docs.python.org/3/library/calendar.html).
     """)
     return
 
@@ -425,7 +424,7 @@ def _(bisiesto, datetime):
     _ahora = datetime.datetime.now()
     es_bisiesto = calendar.isleap(_ahora.year)
     calendario = calendar.month(_ahora.year, _ahora.month)
-    print("Año bisiesto:", bisiesto)
+    print("Ano bissexto:", es_bisiesto)
     print(calendario)
     return
 
@@ -434,15 +433,15 @@ def _(bisiesto, datetime):
 def _(mo):
     mo.md(r"""
     ---
-    ## 1.3 - ¿Cómo crear una librería propia?
+    ## 1.3 - Como criar uma biblioteca própria?
 
-    Una librería consiste simplemente en una serie de archivos de código (extensión `.py`) con definiciones de las funciones a utilizar. Luego de importar la librería a un código, estas funciones se pueden acceder y utilizar. Los archivos de la libería se pueden distribuir de una forma jerárquica, teniendo de esta forma "sublibrerías" y permitiendo así clasificar las funciones.
+    Uma biblioteca consiste simplesmente em uma série de arquivos de código (extensão `.py`) com definições das funções a serem utilizadas. Depois de importar a biblioteca para um código, essas funções podem ser acessadas e utilizadas. Os arquivos da biblioteca podem ser distribuídos de forma hierárquica, tendo assim "subbibliotecas" e permitindo classificar as funções.
 
-    Para crear un paquete se requieren dos elementos:
-    * Todos los archivos `.py` con las funciones en una única carpeta, con el nombre de la librería
-    * Un archivo `__init__.py` (que normalmente se deja vacío) para que el intérprete identifique la carpeta como una librería
+    Para criar um pacote são necessários dois elementos:
+    * Todos os arquivos `.py` com as funções em uma única pasta, com o nome da biblioteca
+    * Um arquivo `__init__.py` (que normalmente é deixado vazio) para que o interpretador identifique a pasta como uma biblioteca
 
-    Hay muchos [recursos](https://www.tutorialsteacher.com/python/python-package) en línea que explican y ejemplifican este procedimiento.
+    Há muitos [recursos](https://www.tutorialsteacher.com/python/python-package) on-line que explicam e exemplificam este procedimento.
     """)
     return
 
@@ -451,9 +450,9 @@ def _(mo):
 def _(mo):
     mo.md(r"""
     ---
-    ### Más información
+    ### Mais informações
 
-    * [Documentación oficial de Python](https://docs.python.org/3/)
+    * [Documentação oficial do Python](https://docs.python.org/3/)
     """)
     return
 
@@ -462,7 +461,7 @@ def _(mo):
 def _(mo):
     mo.md(r"""
     ---
-    **Universidad de Costa Rica** | Facultad de Ingeniería | Escuela de Ingeniería Eléctrica
+    **Universidade da Costa Rica** | Faculdade de Engenharia | Escola de Engenharia Elétrica
 
     &copy; 2021
 
