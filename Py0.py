@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.23.8"
+__generated_with = "0.23.6"
 app = marimo.App()
 
 
@@ -578,7 +578,7 @@ def _():
     print("Hello {}!".format(word))
     print("{} entre {} é cerca de {:0.2f}".format(x, y, z))
     print(f"Nos anos {w}...")
-    return (x,)
+    return
 
 
 @app.cell(hide_code=True)
@@ -734,16 +734,16 @@ def _(mo):
 
 
 @app.cell
-def _(x):
-    # x = 3
+def _():
+    x1 = 3
 
-    # Se a definição de x está "comentada"
+    # Se a definição de x1 está "comentada"
     try:
-        print(f"A variável existe e é {x}.")
+        print(f"A variável existe e é {x1}.")
     except:
         print("Opa! A variável não existe")
 
-    # Agora pode-se testar "descomentando" x
+    # Agora pode-se testar "descomentando" x1
     return
 
 
