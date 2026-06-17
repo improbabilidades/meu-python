@@ -307,11 +307,11 @@ def _(mo):
 
 @app.cell
 def _():
-    a = 21 & 10
-    b = ~a
-    c = 13 | 21
-    d = 74 << 2
-    print(a, b, c, d)
+    ai = 21 & 10
+    bi = ~ai
+    ci = 13 | 21
+    di = 74 << 2
+    print(ai, bi, ci, di)
     return
 
 
