@@ -13,7 +13,8 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
 
     **Universidade da Costa Rica** | Escola de Engenharia Elétrica
 
@@ -21,26 +22,29 @@ def _(mo):
 
     ### `PyX` - Série de tutoriais em Python para análise de dados
 
-    # `Py3` - *Biblioteca de manipulação e análise de dados do Pandas*
+    # `Py2` - *Biblioteca de manipulação e análise de dados do Pandas*
 
     > **Pandas** é uma biblioteca útil e popular de manipulação de dados que oferece estruturas de dados para análise de tabelas numéricas e séries temporais. Pelas suas capacidades, é comparável ao Excel ou outras planilhas, mas de forma *programática*. Esta é uma introdução ao objeto `DataFrame` e suas características básicas.
 
     *Fabian Abarca Calderón* \
     *Jonathan Rojas Sibaja*
 
-    ---""")
+    ---
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""## Biblioteca Pandas
+    mo.md(r"""
+    ## Biblioteca Pandas
 
     Para trabalhar com um grande número de dados, é desejável ter um conjunto de ferramentas que nos permita realizar operações comuns de forma intuitiva e eficiente. Pandas, uh, é resolvido por padrão fazer isso em Python e faz parte do ecossistema SciPy. Ele vem instalado com o Anaconda.
 
     **Nota 0**: A documentação oficial está em [https://pandas.pydata.org/docs/](https://pandas.pydata.org/docs/).Este guia é baseado em "[Tutoriais de primeiros passos](https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html)".**Nota 1**: Para todo este guia será feita a seguinte importação de biblioteca.
 
-    **Nota 2**: Por convenção, o *alias* do Pandas é `pd`.""")
+    **Nota 2**: Por convenção, o *alias* do Pandas é `pd`.
+    """)
     return
 
 
@@ -55,7 +59,8 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""### Estruturas de Dados Pandas
+    mo.md(r"""
+    ### Estruturas de Dados Pandas
 
     O Pandas permitirá a criação de novas estruturas de dados `Series` e `DataFrame`, que são classes otimizadas para manipulação de dados. Embora sejam semelhantes em forma às estruturas Python, como listas e dicionários, na verdade incorporam um grande número de novos atributos e métodos:
 
@@ -78,7 +83,8 @@ def _(mo):
                   dtype=None, name=None, copy=False, fastpath=False)
     ```
 
-    onde `data` é uma sequência ou estrutura de dados iterável do Python, como uma lista, uma tupla, um dicionário, um intervalo, etc. O exemplo a seguir possui indexação automática.""")
+    onde `data` é uma sequência ou estrutura de dados iterável do Python, como uma lista, uma tupla, um dicionário, um intervalo, etc. O exemplo a seguir possui indexação automática.
+    """)
     return
 
 
@@ -96,9 +102,9 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Usando o comando NumPy `random.randn` é possível gerar dados aleatórios para a lista. Também é possível adicionar índices diferentes dos numéricos, usando o argumento `index` e uma lista de índices do mesmo tamanho dos indicados."""
-    )
+    mo.md(r"""
+    Usando o comando NumPy `random.randn` é possível gerar dados aleatórios para a lista. Também é possível adicionar índices diferentes dos numéricos, usando o argumento `index` e uma lista de índices do mesmo tamanho dos indicados.
+    """)
     return
 
 
@@ -115,9 +121,9 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""É possível inspecionar os atributos e métodos de dois objetos `Series` criados anteriormente com a função `dir()` do Python, e descritores estatísticos como correlação ou média podem ser vistos."""
-    )
+    mo.md(r"""
+    É possível inspecionar os atributos e métodos de dois objetos `Series` criados anteriormente com a função `dir()` do Python, e descritores estatísticos como correlação ou média podem ser vistos.
+    """)
     return
 
 
@@ -129,9 +135,9 @@ def _(s_1):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Uma vez criado o objeto `Series`, podemos executar operações vetoriais com ele ou adicionar outros atributos, como um nome."""
-    )
+    mo.md(r"""
+    Uma vez criado o objeto `Series`, podemos executar operações vetoriais com ele ou adicionar outros atributos, como um nome.
+    """)
     return
 
 
@@ -146,7 +152,8 @@ def _(pd, q):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.2. - `DataFrame`
 
     No Pandas, um `DataFrame` corresponde a um array **bidimensional** rotulado, semelhante à concatenação de várias `Series`. Tambem suporta vários tipos de dados.
@@ -160,7 +167,8 @@ def _(mo):
 
     A atribuição dos rótulos pode ser decidida pelo usuário e o Python corresponderá aos valores, caso haja diferenças nos tamanhos das listas agregadas, preencherá esses espaços seguindo regras de bom senso.
 
-    Vamos seguir um exemplo de duas ‘Séries’ de tamanhos diferentes. Observe as diferenças na ordem dos dois índices.""")
+    Vamos seguir um exemplo de duas ‘Séries’ de tamanhos diferentes. Observe as diferenças na ordem dos dois índices.
+    """)
     return
 
 
@@ -179,11 +187,13 @@ def _(pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""Com `dir()` também é possível consultar atributos e métodos disponíveis de `DataFrame`.
+    mo.md(r"""
+    Com `dir()` também é possível consultar atributos e métodos disponíveis de `DataFrame`.
 
     ##### Exemplo com tipo de índice "timestamp"
 
-    Os índices podem ser um carimbo de data/hora (*timestamp*). Este é um caso útil em que, por exemplo, um registro de diversas variáveis ​​(as colunas) é mantido em uma sucessão de momentos diferentes (o índice):""")
+    Os índices podem ser um carimbo de data/hora (*timestamp*). Este é um caso útil em que, por exemplo, um registro de diversas variáveis ​​(as colunas) é mantido em uma sucessão de momentos diferentes (o índice):
+    """)
     return
 
 
@@ -199,9 +209,11 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""##### Exemplo com diferentes tipos de dados
+    mo.md(r"""
+    ##### Exemplo com diferentes tipos de dados
 
-    Assim como em `Series`, `DataFrames` podem usar diferentes tipos de dados em cada coluna e ser atribuídos como dicionários.""")
+    Assim como em `Series`, `DataFrames` podem usar diferentes tipos de dados em cada coluna e ser atribuídos como dicionários.
+    """)
     return
 
 
@@ -223,7 +235,8 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""#### Modificações no `DataFrame`
+    mo.md(r"""
+    #### Modificações no `DataFrame`
 
     Uma vez inicializado o `DataFrame`, ações como extrair, excluir e inserir colunas podem ser executadas, com uma sintaxe semelhante à de dois [dicionários](https://www.w3schools.com/python/python_dictionaries.asp).
     """)
@@ -265,10 +278,12 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.3. - Inspecione os dados
 
-    É possível (e útil) “dar uma olhada” no primeiro e no último dado. Por exemplo, no `DataFrame` chamado `df` você pode ver as primeiras ***N*** linhas de dados com o comando `head`.""")
+    É possível (e útil) “dar uma olhada” no primeiro e no último dado. Por exemplo, no `DataFrame` chamado `df` você pode ver as primeiras ***N*** linhas de dados com o comando `head`.
+    """)
     return
 
 
@@ -280,9 +295,9 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Se você deseja exibir apenas as três últimas linhas, use o comando `tail`:"""
-    )
+    mo.md(r"""
+    Se você deseja exibir apenas as três últimas linhas, use o comando `tail`:
+    """)
     return
 
 
@@ -294,7 +309,9 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""Para exibir os índices, use:""")
+    mo.md(r"""
+    Para exibir os índices, use:
+    """)
     return
 
 
@@ -306,9 +323,11 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""##### Exemplo de conversão para NumPy
+    mo.md(r"""
+    ##### Exemplo de conversão para NumPy
 
-    Quando desejar, você pode transformar o `DataFrame` em um `array` NumPy.""")
+    Quando desejar, você pode transformar o `DataFrame` em um `array` NumPy.
+    """)
     return
 
 
@@ -320,17 +339,21 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""Acima se o `DataFrame` possui um único tipo ou vários tipos de dados.""")
+    mo.md(r"""
+    Acima se o `DataFrame` possui um único tipo ou vários tipos de dados.
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""##### Exemplo de manipulação para um único tipo de dado
+    mo.md(r"""
+    ##### Exemplo de manipulação para um único tipo de dado
 
     Se todos os elementos forem do mesmo tipo, algumas funções específicas de análise e manipulação podem ser executadas, principalmente se forem dados numéricos.
 
-    A seguir, um array do tipo `DataFrame` 6$\times$4 de números aleatórios é criado.""")
+    A seguir, um array do tipo `DataFrame` 6$\times$4 de números aleatórios é criado.
+    """)
     return
 
 
@@ -348,9 +371,9 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""É possível obter um resumo de dois descritores estatísticos principais de cada coluna, neste caso: a contagem de elementos, a média, o desvio padrão, o valor mínimo, o primeiro, segundo e terceiro quartil, e o valor máximo."""
-    )
+    mo.md(r"""
+    É possível obter um resumo de dois descritores estatísticos principais de cada coluna, neste caso: a contagem de elementos, a média, o desvio padrão, o valor mínimo, o primeiro, segundo e terceiro quartil, e o valor máximo.
+    """)
     return
 
 
@@ -362,9 +385,11 @@ def _(df_num):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""##### Reordenar dados
+    mo.md(r"""
+    ##### Reordenar dados
 
-    É comum querer reordenar os dados com alguma coluna de referência:""")
+    É comum querer reordenar os dados com alguma coluna de referência:
+    """)
     return
 
 
@@ -376,7 +401,8 @@ def _(df_num):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.4. - Selecione dados
 
     > Em Python, selecionar (ou pesquisar) dados usando Pandas é mais eficiente do que expressões para selecionar e obter dados em NumPy.
@@ -394,9 +420,9 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Você também pode selecionar um intervalo de linhas (registros) ao mesmo tempo:"""
-    )
+    mo.md(r"""
+    Você também pode selecionar um intervalo de linhas (registros) ao mesmo tempo:
+    """)
     return
 
 
@@ -408,9 +434,9 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Para obter uma posição específica, você deve indicar a linha e a coluna usando o comando `at`:"""
-    )
+    mo.md(r"""
+    Para obter uma posição específica, você deve indicar a linha e a coluna usando o comando `at`:
+    """)
     return
 
 
@@ -422,9 +448,9 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Você pode localizar esse mesmo elemento pela posição de meio dia e não pelos índices, usando o comando `iloc`:"""
-    )
+    mo.md(r"""
+    Você pode localizar esse mesmo elemento pela posição de meio dia e não pelos índices, usando o comando `iloc`:
+    """)
     return
 
 
@@ -436,9 +462,9 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Podemos localizar os dados que atendem a uma determinada condição booleana:"""
-    )
+    mo.md(r"""
+    Podemos localizar os dados que atendem a uma determinada condição booleana:
+    """)
     return
 
 
@@ -456,12 +482,14 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.5. - Operações em dados
 
     Em Python, as operações são executadas em todos os dados, retornando o valor de saída por linhas ou colunas.
 
-    Por exemplo, para calcular a média estatística de dois dados de cada coluna, é usado o comando `mean`, que percorre a dimensão `0` (linhas) da seguinte forma:""")
+    Por exemplo, para calcular a média estatística de dois dados de cada coluna, é usado o comando `mean`, que percorre a dimensão `0` (linhas) da seguinte forma:
+    """)
     return
 
 
@@ -473,9 +501,9 @@ def _(df_num):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Se, porém, você deseja saber a média de dois valores por linha, utiliza-se a seguinte variação, onde `1` é a dimensão das colunas:"""
-    )
+    mo.md(r"""
+    Se, porém, você deseja saber a média de dois valores por linha, utiliza-se a seguinte variação, onde `1` é a dimensão das colunas:
+    """)
     return
 
 
@@ -487,9 +515,11 @@ def _(df_num):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""##### Exemplo de contagem de ocorrências de valores únicos
+    mo.md(r"""
+    ##### Exemplo de contagem de ocorrências de valores únicos
 
-    Para a seguinte série de exemplos:""")
+    Para a seguinte série de exemplos:
+    """)
     return
 
 
@@ -503,9 +533,9 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Você pode aplicar operações como contagem (ou "ocorrências de cada um") em `Series` ou `DataFrame` e retornar um resultado classificado do maior para o menor número de ocorrências."""
-    )
+    mo.md(r"""
+    Você pode aplicar operações como contagem (ou "ocorrências de cada um") em `Series` ou `DataFrame` e retornar um resultado classificado do maior para o menor número de ocorrências.
+    """)
     return
 
 
@@ -523,9 +553,11 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""##### Operações em personagens
+    mo.md(r"""
+    ##### Operações em personagens
 
-    Existem também operações que podem ser aplicadas a 'Séries' de palavras:""")
+    Existem também operações que podem ser aplicadas a 'Séries' de palavras:
+    """)
     return
 
 
@@ -540,14 +572,16 @@ def _(pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.6. - Mesclar dados
 
     No Pandas, para concatenar dados você usa o comando `concat()` onde```python
     pandas.concat(objs, axis=0, join='outer', ignore_index=False,
                   keys=None, levels=None, names=None, verify_integrity=False,
                   sort=False, copy=True)[source]
-    ```onde `axis=` determina ao longo de qual dimensão eles são concatenados: `0` linhas (vertical) e `1` colunas (horizontal) têm a seguinte forma:""")
+    ```onde `axis=` determina ao longo de qual dimensão eles são concatenados: `0` linhas (vertical) e `1` colunas (horizontal) têm a seguinte forma:
+    """)
     return
 
 
@@ -565,15 +599,16 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""**Nota**: Observe que é necessário extrair os fragmentos primeiro porque você não pode concatenar `DataFrame` diretamente."""
-    )
+    mo.md(r"""
+    **Nota**: Observe que é necessário extrair os fragmentos primeiro porque você não pode concatenar `DataFrame` diretamente.
+    """)
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.7. - Dados de grupo
 
     Em Pandar, "grupo" refere-se a:
@@ -582,7 +617,8 @@ def _(mo):
     - Aplicar uma função a cada grupo de forma independente.
     - Combine os resultados em uma estrutura de dados.
 
-    Abaixo está um exemplo de agrupamento aplicando uma soma às colunas numéricas associadas por um determinado critério:""")
+    Abaixo está um exemplo de agrupamento aplicando uma soma às colunas numéricas associadas por um determinado critério:
+    """)
     return
 
 
@@ -602,9 +638,9 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""O resultado a seguir agrupa as linhas com os elementos em `A` e adiciona os resultados de colunas não categóricas (ou seja, numéricas), que neste caso são `C` e `D`."""
-    )
+    mo.md(r"""
+    O resultado a seguir agrupa as linhas com os elementos em `A` e adiciona os resultados de colunas não categóricas (ou seja, numéricas), que neste caso são `C` e `D`.
+    """)
     return
 
 
@@ -616,9 +652,9 @@ def _(df_foo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Os resultados a seguir agrupam primeiro por `A` e depois por `B`, para finalmente adicionar as colunas associadas `C` e `D`."""
-    )
+    mo.md(r"""
+    Os resultados a seguir agrupam primeiro por `A` e depois por `B`, para finalmente adicionar as colunas associadas `C` e `D`.
+    """)
     return
 
 
@@ -630,12 +666,14 @@ def _(df_foo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.8. - Reorganizar dados
 
     ##### Pilha
 
-    No Pandas, uma forma de reorganizar os dados é usando o comando `stack`:""")
+    No Pandas, uma forma de reorganizar os dados é usando o comando `stack`:
+    """)
     return
 
 
@@ -648,9 +686,11 @@ def _(df_2):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""##### Tabela dinâmica
+    mo.md(r"""
+    ##### Tabela dinâmica
 
-    Você também pode alterar a forma como os dados são organizados como tabelas dinâmicas:""")
+    Você também pode alterar a forma como os dados são organizados como tabelas dinâmicas:
+    """)
     return
 
 
@@ -671,9 +711,9 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""A tabela a seguir resumirá os valores em `D` associados ao agrupamento em relação a `A` e `B`, para cada categoria em `C`. É uma ferramenta **poderosa**."""
-    )
+    mo.md(r"""
+    A tabela a seguir resumirá os valores em `D` associados ao agrupamento em relação a `A` e `B`, para cada categoria em `C`. É uma ferramenta **poderosa**.
+    """)
     return
 
 
@@ -686,7 +726,9 @@ def _(df_piv, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""Como extrair um elemento de uma tabela dinâmica?""")
+    mo.md(r"""
+    Como extrair um elemento de uma tabela dinâmica?
+    """)
     return
 
 
@@ -698,10 +740,12 @@ def _(v):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.9. - Série Tempo
 
-    No Pandas, as séries de andamento permitem gerar sequências com uma frequência fixa durante um período de andamento, como:""")
+    No Pandas, as séries de andamento permitem gerar sequências com uma frequência fixa durante um período de andamento, como:
+    """)
     return
 
 
@@ -715,7 +759,9 @@ def _(pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""Cuja hora pode ser convertida para um fuso horário diferente:""")
+    mo.md(r"""
+    Cuja hora pode ser convertida para um fuso horário diferente:
+    """)
     return
 
 
@@ -728,9 +774,9 @@ def _(dti):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Você também pode converter uma série de andamento para uma frequência específica:"""
-    )
+    mo.md(r"""
+    Você também pode converter uma série de andamento para uma frequência específica:
+    """)
     return
 
 
@@ -750,10 +796,12 @@ def _(ts):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.10. - Gráficos
 
-    Em Python, o mapeamento padrão é usado para usar os comandos da API `matplotlib` como métodos `Series` e `DataFrame`. Assim, por exemplo, você pode representar graficamente uma `série` de dados:""")
+    Em Python, o mapeamento padrão é usado para usar os comandos da API `matplotlib` como métodos `Series` e `DataFrame`. Assim, por exemplo, você pode representar graficamente uma `série` de dados:
+    """)
     return
 
 
@@ -777,9 +825,9 @@ def _(np, pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Arranjos do tipo `DataFrame` também podem ser representados graficamente de forma que várias curvas sejam representadas no mesmo gráfico, conforme mostrado abaixo:"""
-    )
+    mo.md(r"""
+    Arranjos do tipo `DataFrame` também podem ser representados graficamente de forma que várias curvas sejam representadas no mesmo gráfico, conforme mostrado abaixo:
+    """)
     return
 
 
@@ -801,10 +849,12 @@ def _(np, pd, plt, ts_1):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ##3.11. - Dados de importação e exportação
 
-    Pandas é um excelente “gerenciador” de arquivos de dados externos, como `.xls` ou `.csv`. Por exemplo, para criar um arquivo `models.csv` a partir de dois dados anteriores:""")
+    Pandas é um excelente “gerenciador” de arquivos de dados externos, como `.xls` ou `.csv`. Por exemplo, para criar um arquivo `models.csv` a partir de dois dados anteriores:
+    """)
     return
 
 
@@ -816,9 +866,9 @@ def _(df_3):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""Cujo conteúdo pode ser "chamado" novamente usando o comando a continuidade, que o salva como um `DataFrame`."""
-    )
+    mo.md(r"""
+    Cujo conteúdo pode ser "chamado" novamente usando o comando a continuidade, que o salva como um `DataFrame`.
+    """)
     return
 
 
@@ -830,7 +880,8 @@ def _(pd):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     ###Mais informações
 
     * [Página oficial do Pandas](https://pandas.pydata.org/)
@@ -840,12 +891,14 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""---
+    mo.md(r"""
+    ---
     **Universidade da Costa Rica** | Faculdade de Engenharia | Escola de Engenharia Elétrica
 
     &copiar; 2021
 
-    ---""")
+    ---
+    """)
     return
 
 

@@ -62,18 +62,26 @@ def _(mo):
     Existem várias formas de execução de Python. Pode ser executado no próprio computador ou em alguma das várias plataformas online que existem, como [Google Colab](https://colab.research.google.com/) ou [molab](https://molab.marimo.io/notebooks).
     Como vamos utilizar o Python a partir de nossas máquinas locais no Laboratório, vamos usar a instalação padrão do Python para Windows.
 
-    Caso seu computador não possua o Python instalado execute o seguinte procedimento:
+    Execute o seguinte procedimento:
 
-    <img src ="TErminal.jpg" width=“250”>
-    ![Acessar_Terminal](\TErminal.jpg)
+    ####Passo 1:
+    Primeiro é preciso Abrir uma Janela de Terminal no Windows --> Use as Teclas (do TECLADO) **WINDOWS+R** (para abrir a janela de Executar comandos).
+    Na janela de Executar comandos digite o comando **cmd** e clique em **OK**.
 
+    ####Passo2:
     Depois, no prompt de comando do Terminal, digite o comando :
+
     ```bash
     python3           --- para entrar no ambiente de programação python
     ```
-    ![Tela_Terminal](./TErminal2.jpg)
 
-    Os 3 >>> vermelhos indicam que você está no ambiente de programação do Python.
+    **OBS:** Caso o Python ainda não esteja instalado no seu computador você vai precisar instalar. Clique no Botão Azul e prossiga com a instalação, responda **y**  para todas as perguntas. No final retorne ao Terminal e digite novamente o comando:
+
+    ```bash
+    python3           --- para entrar no ambiente de programação python
+    ```
+
+    Os 3 **>>> vermelhos** indicam que você está no ambiente de programação do Python.
 
     Para sair do ambiente de programação python você pode usar o comando
     ```bash
@@ -81,7 +89,9 @@ def _(mo):
     ```
     Este comando faz você retornar ao prompt de comando do Terminal.
 
-    # Observação:
+    **NOTA:** Você só vai precisar instalar o Python uma única vez. Depois de instalado é só entrar no ambiente com o comando python3.
+
+    ## Observação:
     - A instalação recomendada de Python e seus pacotes é com [uv]
     - Para instalar o Python, pode seguir primeiro as [instruções de instalação de **uv**](https://docs.astral.sh/uv/getting-started/installation/) para seu sistema operacional.
     - Depois da instalação do **uv**, basta rodar o comando abaixo para instalar o Python:
@@ -510,7 +520,7 @@ def _(mo):
     mo.md(r"""
     ### 0.6.2 Algumas funções ("métodos") sobre cadeias de caracteres
 
-    É possível realizar operações específicas de texto sobre um `str`. A lista completa de métodos está disponível [aqui](https://docs.python.org/3/library/stdtypes.html#string-methods).
+    É possível realizar operações específicas de texto sobre um `str`. A lista completa de métodos está disponível no link https://docs.python.org/3/library/stdtypes.html#string-methods (copie e cole o link em uma nova aba do navegador).
 
     * `str.capitalize()`: Retorna uma cópia da cadeia com seu primeiro caractere em maiúscula e o restante em minúscula.
     * `str.endswith( sufixo [ , início [ , fim ] ] )`: Retorna `True` se a cadeia termina com o sufixo especificado, caso contrário retorna `False`.
@@ -525,8 +535,9 @@ def _():
 
     print(text)
     print(text.capitalize())
-    print(text.lower().endswith("!"))
+    print(text.lower().endswith("dia!"))
     print(text.upper())
+    print(text.lower())
     return
 
 
@@ -572,7 +583,7 @@ def _():
     z2 = x2 / y2
     w2 = 2026
     print("Maravilha de {}!".format(word))
-    print("{} entre {} é cerca de {:0.2f}".format(x2, y2, z2))
+    print("{} dividido por {} é aproximadamente {:0.2f}".format(x2, y2, z2))
     print(f"Nos anos {w2}...")
     return
 
@@ -622,6 +633,8 @@ def _():
     # Verificar igualdade
     # Mostrar algum dos dicionários
     print(c3)
+    print(e3)
+    type(a3)
     return
 
 
@@ -718,6 +731,7 @@ def _():
         print("Boa tarde")
     else:
         print("Boa noite")
+    print(H)
     return
 
 
@@ -732,14 +746,14 @@ def _(mo):
 
     O comando `except` permite agir em caso de erro.
 
-    Outras opções com `else` e `finally` podem ser encontradas [aqui](https://www.w3schools.com/python/python_tryexcept.asp).
+    Outras opções com `else` e `finally` podem ser encontradas no link https://www.w3schools.com/python/python_tryexcept.asp (copie e cole o endereço em uma nova aba do navegador).
     """)
     return
 
 
 @app.cell
-def _():
-    x1 = 3
+def _(x1):
+    #x1 = 3
 
     # Se a definição de x1 está "comentada"
     try:
@@ -760,14 +774,14 @@ def _(mo):
 
     ```python
     match variable:
-        case "a":
-            print("It's a!")
+        case "g":
+            print("É um Gato!")
         case "b":
-            print("It's b!")
+            print("É um Boi!")
         case "c":
-            print("It's c!")
+            print("É um Cachorro!")
         case _:
-            print("It was something else")
+            print("É outro animal")
     ```
     """)
     return
@@ -775,17 +789,17 @@ def _(mo):
 
 @app.cell
 def _():
-    variable = "a"
+    variable = "f"
 
     match variable:
-        case "a":
-            print("It's 'a'!")
+        case "g":
+            print("É um Gato!")
         case "b":
-            print("It's 'b''!")
+            print("É um Boi!")
         case "c":
-            print("It's 'c'!")
+            print("É um Cachorro!")
         case _:
-            print("It was something else")
+            print("É outro animal")
     return
 
 
@@ -817,7 +831,7 @@ def _(mo):
 
     **Nota 1**: a sequência `range()` é útil quando se quer iterar sobre uma longa sequência de números (por exemplo, de 10 até 100).
 
-    **Nota 2**: O operador `a += n` é equivalente a `a = a + n`. Também existem `-=` e `*=`.
+    **Nota 2**: O operador **a += n** é equivalente a **a = a + n**. Também existem **-=** e ***=**.
     """)
     return
 
@@ -877,8 +891,8 @@ def _(mo):
 def _():
     name = input("Digite seu nome: ")
 
-    print("Hi {}.".format(name))
-    print('This is the help for function "abs":\n')
+    print("Oi {}.".format(name))
+    print('Este é o help da função "abs":\n')
     help(abs)
     return
 

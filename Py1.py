@@ -59,7 +59,7 @@ def _(mo):
     Em Python, a sintaxe para a criação de uma função é:
 
     ```python
-    def nombre():
+    def nome_da_funcao():
         <ação da função>
     ```
     """)
@@ -68,11 +68,11 @@ def _(mo):
 
 @app.cell
 def _():
-    def suma(x, y):
+    def soma(x, y):
         z = x + y
         return z
 
-    print(suma(1, 2))
+    print(soma(1, 2))
     return
 
 
@@ -418,7 +418,7 @@ def _(mo):
 
 
 @app.cell
-def _(bisiesto, datetime):
+def _(datetime):
     import calendar
 
     _ahora = datetime.datetime.now()

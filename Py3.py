@@ -22,7 +22,7 @@ def _(mo):
 
     ### `PyX` - Série de tutoriais em Python para análise de dados
 
-    # `Py2` - *Bibliotecas de Computação Científica*
+    # `Py3` - *Bibliotecas de Computação Científica*
 
     > Com bibliotecas externas é possível acessar poderosas ferramentas computacionais que tornam o Python comparável a outros programas de cálculo numérico, como Matlab, R, Mathematica e outros.
 
