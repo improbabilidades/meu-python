@@ -21,7 +21,7 @@ def _(mo):
     # IC - 10 - Introdução ao Python
     ## Profa Elizabet Medeiros
 
-    *MATERIAL CRIADO E CEDIDO POR: Prof. Fabián Abarca - da Universidad de Costa Rica.*
+    *Material criado e cedido por Prof. Fabián Abarca da Universidad de Costa Rica.*
 
     ---
     """)
@@ -64,46 +64,51 @@ def _(mo):
 
     Execute o seguinte procedimento:
 
-    ####Passo 1:
-    Primeiro é preciso Abrir uma Janela de Terminal no Windows --> Use as Teclas (do TECLADO) **WINDOWS+R** (para abrir a janela de Executar comandos).
+    #### Passo 1:
+
+    Primeiro é preciso abrir uma janela de **Terminal** no Windows --> Use as Teclas (do TECLADO) **WINDOWS (CMD) + R** (<kbd>CMD</kbd> + <kbd>R</kbd>) para abrir a janela de Executar comandos).
     Na janela de Executar comandos digite o comando **cmd** e clique em **OK**.
 
-    ####Passo2:
-    Depois, no prompt de comando do Terminal, digite o comando :
+    ![Abrir terminal](public/abrir_terminal.png)
+
+    #### Passo 2:
+
+    Depois, no _prompt_ de comando do Terminal, digite o comando `python3`:
 
     ```bash
-    python3           --- para entrar no ambiente de programação python
+    C:\Users\nome_de_usuario>python3 # para entrar no ambiente de programação Python
     ```
 
     **OBS:** Caso o Python ainda não esteja instalado no seu computador você vai precisar instalar. Clique no Botão Azul e prossiga com a instalação, responda **y**  para todas as perguntas. No final retorne ao Terminal e digite novamente o comando:
 
     ```bash
-    python3           --- para entrar no ambiente de programação python
+    python3           # para entrar no ambiente de programação Python
     ```
 
-    Os 3 **>>> vermelhos** indicam que você está no ambiente de programação do Python.
+    ![Terminal](public/terminal.jpg)
+
+    Os três `>` vermelhos, `>>>`, são o _prompt_ de Python e indicam que você está no ambiente de programação e pode começar escrever comandos.
 
     Para sair do ambiente de programação python você pode usar o comando
+
     ```bash
     exit()
     ```
-    Este comando faz você retornar ao prompt de comando do Terminal.
+    Este comando faz você retornar ao _prompt_ de comando do Terminal.
 
-    **NOTA:** Você só vai precisar instalar o Python uma única vez. Depois de instalado é só entrar no ambiente com o comando python3.
+    **NOTA:** Você só vai precisar instalar o Python uma única vez. Depois de instalado é só entrar no ambiente com o comando `python3`.
 
-    ## Observação:
-    - A instalação recomendada de Python e seus pacotes é com [uv]
+    ## Observação para instalação em computador pessoal
+
+    - A instalação recomendada de Python e seus pacotes é com **uv**
     - Para instalar o Python, pode seguir primeiro as [instruções de instalação de **uv**](https://docs.astral.sh/uv/getting-started/installation/) para seu sistema operacional.
     - Depois da instalação do **uv**, basta rodar o comando abaixo para instalar o Python:
+
     ```bash
     uv python install
     ```
 
-    ### Mais informações
-
-    As informações mais precisas sobre os aspectos básicos da linguagem Python estão no [manual de referência](https://docs.python.org/3/library/) da _Biblioteca Padrão_ do Python.
-
-    #### Antes de começar...
+    /// admonition | Antes de começar...
 
     **Nota 1**: A função `print()` mostra o resultado da avaliação do(s) seu(s) argumento(s).
 
@@ -116,6 +121,7 @@ def _(mo):
     **Nota 5**: A forma "pitônica" de programar em Python (*the Pythonic way*) são convenções que tornam o código mais legível e simples.
 
     **Nota 6**: O _guia de estilo_ para a escrita de código em Python é o [PEP 8](https://peps.python.org/pep-0008/), que estabelece as boas práticas (obrigatórias neste curso) para melhorar a legibilidade e dar consistência ao código.
+    ///
     """)
     return
 
@@ -128,7 +134,7 @@ def _(mo):
 
     Em Python, a atribuição de um dado a uma variável **não** requer a indicação explícita do *tipo de dado*.
 
-    **Nota**: Isso é conhecido como linguagem "dinamicamente tipada", que verifica o tipo de dado em tempo de execução.
+    **Nota**: Isso é conhecido como linguagem "dinámicamente tipada", que verifica o tipo de dado em tempo de execução.
 
     Portanto, basta escrever o seguinte para atribuir números ou caracteres ou qualquer outro objeto de Python a uma variável:
     """)
@@ -179,10 +185,22 @@ def _(mo):
     |     `==`    | é igual a                   |
     |     `!=`    | não é igual a               |
 
+    **Nota 1**: o resultado de uma comparação é um valor booleano (`True` ou `False`)
 
-    **Nota 1**: `=` é de atribuição, `==` é de comparação.
+    **Nota 2**: `=` é de atribuição, `==` é de comparação, por exemplo:
 
-    **Nota 2**: as operações podem ser encadeadas, por exemplo: `x < y < z`
+    ```python
+    pi = 3.14       # atribui o valor 3.14 à variável pi
+
+    if pi == 3.14:  # compara se o valor em pi é igual a 3.14
+        print("É o valor correto!")
+    elif pi > 3.14:
+        print("O valor é maior")
+    else
+        print("O valor é menor")
+    ```
+
+    **Nota 3**: as operações podem ser encadeadas, por exemplo: `x < y < z`
     """)
     return
 
@@ -905,6 +923,8 @@ def _(mo):
     ### Isso é tudo por agora!
 
     Os conceitos vistos até agora em Py0 são poderosos e permitem a programação de soluções para uma grande quantidade de problemas computacionais. Mesmo em tarefas muito mais complexas no futuro, essas bases continuarão sendo essenciais.
+
+    Para programar eu preciso saber todas operações e funciones de Python e fazer sua sintaxis parte do meu DNA? Não! Mas é importante saber quais tipos de coisas são possível de fazer, de algum jeito (basta procurar na internet depois).
 
     No entanto, o verdadeiro segredo do Python são os muitos pacotes que lhe dão "poderes especiais" para quase todo tipo de tarefas, desenvolvidos por uma comunidade ativa ao redor do mundo.
 
