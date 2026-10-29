@@ -215,17 +215,17 @@ def _(mo):
     return
 
 
-app._unparsable_cell(
-    r"""
-    from numpy import *
+@app.cell
+def _():
+    import numpy as np
     import matplotlib.pyplot as plt
 
     # Dados experimentales
-    x = array([ 0.,  1.,  2.,  3.,  4.])
-    y = array([ 10.2 ,  12.1,  15.5 ,  18.3,  20.6 ])
+    x = np.array([ 0.,  1.,  2.,  3.,  4.])
+    y = np.array([ 10.2 ,  12.1,  15.5 ,  18.3,  20.6 ])
 
     # Ajustar a uma recta (polinomio de grado 1)
-    p = polyfit(x, y, 1)
+    p = np.polyfit(x, y, 1)
 
     # Crear la recta de ajuste obtenida.
     y_ajuste = p[0]*x + p[1]
@@ -241,9 +241,7 @@ app._unparsable_cell(
     plt.ylabel('Eixo y')
     plt.legend(('Dados experimentales', 'Ajuste linear'), loc="upper left")
     plt.show()
-    """,
-    name="_",
-)
+    return
 
 
 @app.cell(hide_code=True)

@@ -16,9 +16,9 @@ def _(mo):
     mo.md(r"""
     ---
 
-    **Universidade da Costa Rica** | Escola de Engenharia Elétrica
+    **Universidade Federal da Paraíba** | Centro de Informática
 
-    *IE0405 - Modelos Probabilísticos de Sinais e Sistemas*
+    **Universidade da Costa Rica** | Escola de Engenharia Elétrica
 
     ### `PyX` - Série de tutoriais em Python para análise de dados
 
@@ -26,7 +26,7 @@ def _(mo):
 
     > Dentro das bibliotecas padrão do Python há ferramentas úteis para operações numéricas básicas, para o manuseio de arquivos como os que serão aplicados no curso e outras funções úteis para programação em geral.
 
-    *Fabián Abarca Calderón*
+    *Fabián Abarca* / *Elizabet Medeiros*
 
     ---
     """)
@@ -41,7 +41,7 @@ def _(mo):
     Em programação, geralmente se aceita que "não há que reinventar a roda" e também que "não há que se repetir", e além disso que "é preciso mantê-lo simples". Para não esquecer isso, existem estes acrônimos:
 
     * **DRY**, *don't repeat yourself*
-    * **KISS**, *keep it simple, stupid*
+    * **KISS**, *keep it simple*
 
     Uma forma de seguir estes bons conselhos é criando funções que são invocadas quando há tarefas repetitivas, e também utilizando peças de código ("bibliotecas") que já foram desenvolvidas para resolver aplicações específicas.
 
@@ -296,7 +296,7 @@ def _(d, dinv):
     for i, j in d.items():
         dinv[j].append(i)
 
-    print("\nDespués...")
+    print("\nDepois...")
     dinv
     return
 
@@ -355,11 +355,11 @@ def _(mo):
 def _():
     import csv
 
-    unos = [1] * 10
+    uns = [1] * 10
 
-    with open("unos.csv", "w", newline="") as archivo:
-        escribir = csv.writer(archivo)
-        escribir.writerow(unos)
+    with open("uns.csv", "w", newline="") as arquivo:
+        escribir = csv.writer(arquivo)
+        escribir.writerow(uns)
     return
 
 
@@ -461,9 +461,12 @@ def _(mo):
 def _(mo):
     mo.md(r"""
     ---
+
+    **Universidade Federal da Paraíba** | Centro de Informática
+
     **Universidade da Costa Rica** | Faculdade de Engenharia | Escola de Engenharia Elétrica
 
-    &copy; 2021
+    &copy; 2021 - 2026
 
     ---
     """)

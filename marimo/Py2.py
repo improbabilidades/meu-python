@@ -16,9 +16,9 @@ def _(mo):
     mo.md(r"""
     ---
 
-    **Universidade da Costa Rica** | Escola de Engenharia Elétrica
+    **Universidade Federal da Paraíba** | Centro de Informática
 
-    *IE0405 - Modelos Probabilísticos de Sinais e Sistemas*
+    **Universidade da Costa Rica** | Escola de Engenharia Elétrica
 
     ### `PyX` - Série de tutoriais em Python para análise de dados
 
@@ -26,8 +26,7 @@ def _(mo):
 
     > **Pandas** é uma biblioteca útil e popular de manipulação de dados que oferece estruturas de dados para análise de tabelas numéricas e séries temporais. Pelas suas capacidades, é comparável ao Excel ou outras planilhas, mas de forma *programática*. Esta é uma introdução ao objeto `DataFrame` e suas características básicas.
 
-    *Fabian Abarca Calderón* \
-    *Jonathan Rojas Sibaja*
+    *Fabian Abarca* / *Jonathan Rojas* / *Elizabet Medeiros*
 
     ---
     """)
@@ -41,7 +40,9 @@ def _(mo):
 
     Para trabalhar com um grande número de dados, é desejável ter um conjunto de ferramentas que nos permita realizar operações comuns de forma intuitiva e eficiente. Pandas, uh, é resolvido por padrão fazer isso em Python e faz parte do ecossistema SciPy. Ele vem instalado com o Anaconda.
 
-    **Nota 0**: A documentação oficial está em [https://pandas.pydata.org/docs/](https://pandas.pydata.org/docs/).Este guia é baseado em "[Tutoriais de primeiros passos](https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html)".**Nota 1**: Para todo este guia será feita a seguinte importação de biblioteca.
+    **Nota 0**: A documentação oficial está em [https://pandas.pydata.org/docs/](https://pandas.pydata.org/docs/).Este guia é baseado em "[Tutoriais de primeiros passos](https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html)".
+
+    **Nota 1**: Para todo este guia será feita a seguinte importação de biblioteca.
 
     **Nota 2**: Por convenção, o *alias* do Pandas é `pd`.
     """)
@@ -69,9 +70,11 @@ def _(mo):
     | `Série` | 20+ | 180+ |
     | `DataFrame` | 10+ | 210+ |
 
-    - [Documentação](https://pandas.pydata.org/docs/reference/series.html)de `Série`
-    - [Documentação](https://pandas.pydata.org/docs/reference/frame.html)de `DataFrame`
+    - [Documentação](https://pandas.pydata.org/docs/reference/series.html) de `Série`
+    - [Documentação](https://pandas.pydata.org/docs/reference/frame.html) de `DataFrame`
+
     ---
+
     ##3.1. - `Série`
 
     Em Python, `Series` corresponde a um array de **uma** dimensão que suporta vários tipos de dados (inteiros, palavras, números flutuantes, objetos Python, etc.) e que também são rotulados por um índice que o usuário pode definir ou permitir que o Python crie por padrão.

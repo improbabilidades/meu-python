@@ -1,11 +1,14 @@
 [project]
-name = "projeto1"
+name = "meu-python"
 version = "0.1.0"
 description = "Um super projeto"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "fitter>=1.8.1",
     "marimo[recommended]>=0.23.6",
     "nbconvert>=7.17.1",
+    "nbformat>=5.10.4",
     "playwright>=1.59.0",
+    "scipy>=1.18.1",
 ]
